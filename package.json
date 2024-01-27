@@ -1,0 +1,28 @@
+{
+  "name": "messaging-api",
+  "version": "1.0.0",
+  "description": "An end to end messaging API collection",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shalomalexander/Messaging-API.git"
+  },
+  "author": "Shalom T Alexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shalomalexander/Messaging-API/issues"
+  },
+  "homepage": "https://github.com/shalomalexander/Messaging-API#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  }
+}
