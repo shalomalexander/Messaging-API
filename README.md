@@ -21,14 +21,14 @@ A simple application that provides web services to facilitate group chat and use
 
 ## Features
 
-- [ ] Admin APIs for managing users (create, edit)
+- [x] Admin APIs for managing users (create, edit)
 - [ ] Authentication APIs for login and logout
-- [ ] Normal User APIs for managing groups (create, delete, search, add members)
+- [x] Normal User APIs for managing groups (create, delete, search, add members)
 - [ ] Normal User APIs for group messages (send messages, like messages)
 
 ## Tech Stack
 
-- Backend: Choose a database of your choice (e.g., MongoDB, PostgreSQL)
+- Backend: NodeJS, Express, and MongoDB
 - Frontend: (Optional - if applicable)
 - Testing: Python for end-to-end functional tests
 
