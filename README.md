@@ -44,4 +44,25 @@ A simple application that provides web services to facilitate group chat and use
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/group-chat-app.git
+   git clone https://github.com/shalomalexander/Messaging-API.git
+
+2. Run npm install
+    
+    ```bash
+    npm install
+
+3. Create a MongoDB ATLAS connection and get the MongoURI. Visit the below url
+    
+    ```bash
+    https://www.mongodb.com/cloud/atlas/register
+
+4. Create a .env file in the root and paste your MongoURI.
+
+    ```bash
+    MONGODB_URI='mongodb+srv://<username>:<password>@cluster0.rjxvt2v.mongodb.net/?retryWrites=true&w=majority'
+
+
+
+
+
+
