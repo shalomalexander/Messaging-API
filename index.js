@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
 const groupRoutes = require('./routes/groupRoutes');
+const messageRoutes = require('./routes/messageRoutes');
+const authRoutes = require('./routes/authRoutes');
 const config = require('./config');
 
 const app = express();
@@ -24,8 +26,9 @@ app.use((err, req, res, next) => {
 
 // Routes
 app.use('/users', userRoutes);
-// app.use('/auth', authRoutes);
+app.use('/auth', authRoutes);
 app.use('/groups', groupRoutes);
+app.use('/messages', messageRoutes);
 
 
 app.listen(port, () => {

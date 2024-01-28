@@ -18,6 +18,11 @@ exports.editUser = async (req, res) => {
     const { userId } = req.params;
     const { username, password, isAdmin } = req.body;
 
+    // Check if the user is editing the resource belonging to them
+    if (req.user.userId != userId) {
+      res.status(401).json({ error: 'Not Authorized' });
+    }
+
     // Find the user by ID
     const user = await User.findById(userId);
 
@@ -43,6 +48,18 @@ exports.editUser = async (req, res) => {
     await user.save();
 
     res.json({ message: 'User updated successfully', user });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
+
+exports.getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find({}, 'username isAdmin'); // Retrieve only necessary fields
+
+    res.json({ users });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
