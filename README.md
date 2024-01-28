@@ -22,9 +22,10 @@ A simple application that provides web services to facilitate group chat and use
 ## Features
 
 - [x] Admin APIs for managing users (create, edit)
-- [ ] Authentication APIs for login and logout
+- [x] Authentication APIs for login and logout
 - [x] Normal User APIs for managing groups (create, delete, search, add members)
-- [ ] Normal User APIs for group messages (send messages, like messages)
+- [x] Normal User APIs for group messages (send messages, like messages)
+- [ ] Setting Authorization
 
 ## Tech Stack
 
