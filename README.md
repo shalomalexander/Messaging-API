@@ -1,4 +1,4 @@
-# Group Chat Application
+# Messaging APIs
 
 A simple application that provides web services to facilitate group chat and user management. The application includes Admin APIs for managing users, authentication APIs for login and logout, and features for both normal and admin users.
 
