@@ -18,11 +18,6 @@ exports.editUser = async (req, res) => {
     const { userId } = req.params;
     const { username, password, isAdmin } = req.body;
 
-    // Check if the user is editing the resource belonging to them
-    if (req.user.userId != userId) {
-      res.status(401).json({ error: 'Not Authorized' });
-    }
-
     // Find the user by ID
     const user = await User.findById(userId);
 

@@ -25,7 +25,11 @@ A simple application that provides web services to facilitate group chat and use
 - [x] Authentication APIs for login and logout
 - [x] Normal User APIs for managing groups (create, delete, search, add members)
 - [x] Normal User APIs for group messages (send messages, like messages)
-- [ ] Setting Authorization
+
+## Additional Features
+- [ ] Setting Authorization to each controller.
+- [ ] Adding controller to refresh the token whenever the accessToken is expired.
+- [ ] Creating the Frontend using ReactJS.
 
 ## Tech Stack
 
@@ -38,7 +42,7 @@ A simple application that provides web services to facilitate group chat and use
 ### Prerequisites
 
 - Python 3.x
-- Your chosen database installed and running
+- MongoDB ATLAS database
 
 ### Installation
 
