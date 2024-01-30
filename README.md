@@ -5,19 +5,24 @@ A simple application that provides web services to facilitate group chat and use
 ## Table of Contents
 
 - [Features](#features)
+- [Additional Features](#additional-features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-  - [Configuration](#configuration)
 - [API Documentation](#api-documentation)
-  - [Admin APIs](#admin-apis)
-  - [Authentication APIs](#authentication-apis)
-  - [Group APIs](#group-apis)
-  - [Group Messages APIs](#group-messages-apis)
+  - [1. Create User](#create-user)
+  - [2. Edit User](#edit-user)
+  - [3. Get All Users](#get-all-users)
+  - [4. Create Group](#create-group)
+  - [5. Delete Group](#delete-group)
+  - [6. Search Group](#search-group)
+  - [7. Edit Group](#edit-group)
+  - [8. Send Messages](#send-messages)
+  - [9. Like Messages](#like-messages)
+  - [10. Login](#login)
+  - [11. Logout](#logout)
 - [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -66,7 +71,128 @@ A simple application that provides web services to facilitate group chat and use
     ```bash
     MONGODB_URI='mongodb+srv://<username>:<password>@cluster0.rjxvt2v.mongodb.net/?retryWrites=true&w=majority'
 
+## API Documentation
 
+
+# Messaging API Postman Collection
+
+This Postman collection provides a set of API requests for interacting with a Messaging API. The collection includes requests for user management, group management, messaging, and authentication.
+
+## Collection Information
+
+- **Collection ID**: 2a93c35a-d22e-484c-bdfc-e98887a938f9
+- **Collection Name**: Messaging API
+- **Collection Schema**: [Postman Collection v2.1.0](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+
+## API Requests
+
+### 1. Create User
+
+- **Request Name**: Create User
+- **Method**: POST
+- **Endpoint**: [http://localhost:3000/users/create](http://localhost:3000/users/create)
+- **Request Body**:
+  ```json
+  {
+      "username": "Sharon",
+      "password": "123456"
+  }
+  ```
+
+### 2. Edit User
+
+- **Request Name**: Edit User
+- **Method**: PUT
+- **Endpoint**: [http://localhost:3000/users/edit/65b4ca568074c8aa732361e0](http://localhost:3000/users/edit/65b4ca568074c8aa732361e0)
+- **Request Body**:
+  ```json
+  {
+      "username": "User4",
+      "password": "123456"
+  }
+  ```
+
+### 3. Get All Users
+
+- **Request Name**: Get All Users
+- **Method**: GET
+- **Endpoint**: [http://localhost:3000/users](http://localhost:3000/users)
+
+### 4. Create Group
+
+- **Request Name**: Create Group
+- **Method**: POST
+- **Endpoint**: [http://localhost:3000/groups/create](http://localhost:3000/groups/create)
+- **Request Body**:
+  ```json
+  {
+      "groupName": "Group 1",
+      "members": ["65b4ca568074c8aa732361e0", "65b4ca7b8074c8aa732361e2"]
+  }
+  ```
+
+### 5. Delete Group
+
+- **Request Name**: Delete Group
+- **Method**: POST
+- **Endpoint**: [http://localhost:3000/groups/delete/65b4d0d3d327da10a4e43d89](http://localhost:3000/groups/delete/65b4d0d3d327da10a4e43d89)
+
+### 6. Search Group
+
+- **Request Name**: Search Group
+- **Method**: GET
+- **Endpoint**: [http://localhost:3000/groups](http://localhost:3000/groups)
+
+### 7. Edit Group
+
+- **Request Name**: Edit Group
+- **Method**: PUT
+- **Endpoint**: [http://localhost:3000/groups/edit/65b4d2720901ac7f5715acd6](http://localhost:3000/groups/edit/65b4d2720901ac7f5715acd6)
+- **Request Body**:
+  ```json
+  {
+      "groupName": "Group 1",
+      "members": ["65b4ca568074c8aa732361e0", "65b4ca7b8074c8aa732361e2"]
+  }
+  ```
+
+### 8. Send Messages
+
+- **Request Name**: Send Messages
+- **Method**: GET
+- **Endpoint**: [http://localhost:3000/messages/send](http://localhost:3000/messages/send)
+
+### 9. Like Messages
+
+- **Request Name**: Like Messages
+- **Method**: GET
+- **Endpoint**: [http://localhost:3000/messages/like](http://localhost:3000/messages/like)
+
+### 10. Login
+
+- **Request Name**: Login
+- **Method**: POST
+- **Endpoint**: [http://localhost:3000/auth/login](http://localhost:3000/auth/login)
+- **Request Body**:
+  ```json
+  {
+      "username": "USER1",
+      "password": "123456"
+  }
+  ```
+
+### 11. Logout
+
+- **Request Name**: Logout
+- **Method**: GET
+- **Endpoint**: [http://localhost:3000/auth/logout](http://localhost:3000/auth/logout)
+
+## Note
+
+- Make sure to replace `http://localhost:3000` with the actual base URL of your Messaging API server.
+- Adjust the request bodies and parameters according to your API specifications.
+
+Feel free to explore and use these requests for testing and interacting with your Messaging API. If you encounter any issues or have questions, refer to the API documentation or contact the API provider for assistance.
 
 
 
