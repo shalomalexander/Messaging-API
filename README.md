@@ -32,6 +32,7 @@ A simple application that provides web services to facilitate group chat and use
 - [x] Normal User APIs for group messages (send messages, like messages)
 
 ## Additional Features
+
 - [ ] Setting Authorization to each controller.
 - [ ] Adding controller to refresh the token whenever the accessToken is expired.
 - [ ] Creating the Frontend using ReactJS.
@@ -56,23 +57,29 @@ A simple application that provides web services to facilitate group chat and use
    ```bash
    git clone https://github.com/shalomalexander/Messaging-API.git
 
+   ```
+
 2. Run npm install
-    
-    ```bash
-    npm install
+
+   ```bash
+   npm install
+
+   ```
 
 3. Create a MongoDB ATLAS connection and get the MongoURI. Visit the below url
-    
-    ```bash
-    https://www.mongodb.com/cloud/atlas/register
+
+   ```bash
+   https://www.mongodb.com/cloud/atlas/register
+
+   ```
 
 4. Create a .env file in the root and paste your MongoURI.
 
-    ```bash
-    MONGODB_URI='mongodb+srv://<username>:<password>@cluster0.rjxvt2v.mongodb.net/?retryWrites=true&w=majority'
+   ```bash
+   MONGODB_URI='mongodb+srv://<username>:<password>@cluster0.rjxvt2v.mongodb.net/?retryWrites=true&w=majority'
+   ```
 
 ## API Documentation
-
 
 # Messaging API Postman Collection
 
@@ -94,8 +101,8 @@ This Postman collection provides a set of API requests for interacting with a Me
 - **Request Body**:
   ```json
   {
-      "username": "Sharon",
-      "password": "123456"
+    "username": "Sharon",
+    "password": "123456"
   }
   ```
 
@@ -107,8 +114,8 @@ This Postman collection provides a set of API requests for interacting with a Me
 - **Request Body**:
   ```json
   {
-      "username": "User4",
-      "password": "123456"
+    "username": "User4",
+    "password": "123456"
   }
   ```
 
@@ -126,8 +133,8 @@ This Postman collection provides a set of API requests for interacting with a Me
 - **Request Body**:
   ```json
   {
-      "groupName": "Group 1",
-      "members": ["65b4ca568074c8aa732361e0", "65b4ca7b8074c8aa732361e2"]
+    "groupName": "Group 1",
+    "members": ["65b4ca568074c8aa732361e0", "65b4ca7b8074c8aa732361e2"]
   }
   ```
 
@@ -151,22 +158,37 @@ This Postman collection provides a set of API requests for interacting with a Me
 - **Request Body**:
   ```json
   {
-      "groupName": "Group 1",
-      "members": ["65b4ca568074c8aa732361e0", "65b4ca7b8074c8aa732361e2"]
+    "groupName": "Group 1",
+    "members": ["65b4ca568074c8aa732361e0", "65b4ca7b8074c8aa732361e2"]
   }
   ```
 
 ### 8. Send Messages
 
 - **Request Name**: Send Messages
-- **Method**: GET
+- **Method**: POST
 - **Endpoint**: [http://localhost:3000/messages/send](http://localhost:3000/messages/send)
+- **Request Body**:
+  ```json
+  {
+    "groupId": "65b67ff352bf10c704a71153",
+    "userId": "65b678890b6f948dce566adf",
+    "content": "Hi Bro!"
+  }
+  ```
 
 ### 9. Like Messages
 
 - **Request Name**: Like Messages
-- **Method**: GET
+- **Method**: POST
 - **Endpoint**: [http://localhost:3000/messages/like](http://localhost:3000/messages/like)
+- **Request Body**:
+  ```json
+  {
+    "messageId": "65b6816ed61f8fd1750d8c80",
+    "userId": "65b678850b6f948dce566add"
+  }
+  ```
 
 ### 10. Login
 
@@ -176,8 +198,8 @@ This Postman collection provides a set of API requests for interacting with a Me
 - **Request Body**:
   ```json
   {
-      "username": "USER1",
-      "password": "123456"
+    "username": "USER1",
+    "password": "123456"
   }
   ```
 
@@ -193,7 +215,3 @@ This Postman collection provides a set of API requests for interacting with a Me
 - Adjust the request bodies and parameters according to your API specifications.
 
 Feel free to explore and use these requests for testing and interacting with your Messaging API. If you encounter any issues or have questions, refer to the API documentation or contact the API provider for assistance.
-
-
-
-
