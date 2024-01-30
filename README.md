@@ -206,7 +206,7 @@ This Postman collection provides a set of API requests for interacting with a Me
 ### 11. Logout
 
 - **Request Name**: Logout
-- **Method**: GET
+- **Method**: POST
 - **Endpoint**: [http://localhost:3000/auth/logout](http://localhost:3000/auth/logout)
 
 ## Note
